@@ -7,3 +7,159 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#main-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+/* header */
+.page-header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 24px 30px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.page-header p {
+    font-size: 1em;
+    margin: 6px 0 0 0;
+    color: #95a5a6;
+}
+
+/* nav */
+.nav-bar {
+    background-color: #1a252f;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+}
+
+.nav-bar ul li a {
+    display: inline-block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 13px 20px;
+    font-size: 1.05em;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+/* content area */
+.content-area {
+    padding: 28px 35px;
+    min-height: 400px;
+}
+
+.content-area h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 6px;
+    margin-top: 28px;
+}
+
+.content-area h2:first-child {
+    margin-top: 0;
+}
+
+/* intro box */
+.intro-box {
+    background-color: #eaf3fb;
+    border-left: 4px solid #2980b9;
+    padding: 16px 20px;
+    margin: 18px 0;
+}
+
+/* span highlight */
+.highlight {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+td {
+    padding: 9px 12px;
+    border: 1px solid #cccccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f9fc;
+}
+
+/* lists */
+ul, ol {
+    line-height: 1.9;
+    padding-left: 25px;
+}
+
+/* links */
+a {
+    color: #2980b9;
+}
+
+a:hover {
+    color: #1a6396;
+}
+
+a:visited {
+    color: #7f54a0;
+}
+
+/* for the design comments page */
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    font-size: 0.88em;
+    line-height: 1.5;
+}
+
+/* footer */
+.footer-text {
+    background-color: #1a252f;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.82em;
+}
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 1.7;
+}
