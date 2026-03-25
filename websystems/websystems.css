@@ -13,7 +13,10 @@ body {
     width: 860px;
     margin: 0 auto;
     background-color: #ece9d8;
-    border: 3px solid #808080;
+    border: 3px solid;
+    /* border-color with 4 values goes top right bottom left, used this to get the raised 3d look */
+    border-color: #f5f4ef #404040 #404040 #f5f4ef;
+    outline: 1px solid #808080;
 }
 
 .site-header {
@@ -36,9 +39,12 @@ body {
     margin: 2px 0 0 0;
 }
 
+/* toolbar */
 .top-nav {
     background-color: #d4d0c8;
     padding: 4px 6px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #808080;
 }
 
 .top-nav ul {
@@ -53,11 +59,20 @@ body {
 
 .top-nav ul li a {
     display: inline-block;
+    background-color: #d4d0c8;
     color: #000000;
     text-decoration: none;
     padding: 3px 10px;
     font-size: 12px;
     margin-right: 2px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.top-nav ul li a:hover {
+    background-color: #bab6ae;
 }
 
 .main-content {
