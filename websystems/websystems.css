@@ -17,7 +17,8 @@ body {
 }
 
 .site-header {
-    background-color: #0a246a;
+    /* linear-gradient from w3schools, changed the colours to match XP title bar */
+    background: linear-gradient(to right, #0a246a, #3a6fb5, #a6caf0);
     color: #ffffff;
     padding: 5px 8px;
 }
@@ -26,10 +27,12 @@ body {
     font-size: 13px;
     font-weight: bold;
     margin: 0;
+    text-shadow: 1px 1px 1px #000044;
 }
 
 .site-header p {
     font-size: 11px;
+    color: #c8dff8;
     margin: 2px 0 0 0;
 }
 
