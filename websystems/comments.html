@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immanuel Lam — Comments</title>
+    <link rel="stylesheet" href="websystems.css">
+</head>
+<body>
+
+<nav class="nav-bar" aria-label="Site navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="past.html">Past</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="comments.html" class="active">Comments</a></li>
+    </ul>
+</nav>
+
+<div id="main-content">
+
+    <h1 class="page-header">Design &amp; Structure Comments</h1>
+
+    <p class="intro-lead">
+        This page reflects on the design decisions, HTML structure, and CSS used throughout
+        the site. It is written as part of the UTS Web Systems assignment requirements.
+    </p>
+
+    <!-- Overall site structure -->
+    <section class="section-block">
+        <h2>Overall Site Structure</h2>
+        <p>
+            The site consists of four HTML pages, all sharing a single stylesheet
+            (<code>websystems.css</code>) and a consistent navigation bar. The four pages are:
+        </p>
+        <ul>
+            <li><strong>index.html</strong> — Home/intro page with a welcome message and site overview.</li>
+            <li><strong>past.html</strong> — Background page covering homelabbing, networking, self-hosted services, and web development.</li>
+            <li><strong>future.html</strong> — Goals page focused on red team cybersecurity ambitions.</li>
+            <li><strong>comments.html</strong> — This page, documenting the site's structure, styles, and design rationale.</li>
+        </ul>
+        <p>
+            Navigation is provided on every page via a <code>&lt;nav&gt;</code> element
+            containing an unordered list of links. No Back button is ever needed. All internal
+            links use relative paths. There are no frames, iframes, or external frameworks.
+        </p>
+    </section>
+
+    <!-- Per-page structure -->
+    <section class="section-block">
+        <h2>Per-Page HTML Structure</h2>
+
+        <p><strong>index.html</strong><br>
+        Contains a <code>&lt;nav class="nav-bar"&gt;</code> with a <code>&lt;ul&gt;</code> of
+        four links, a <code>&lt;div id="main-content"&gt;</code> wrapping an
+        <code>&lt;h1&gt;</code> with an inline <code>&lt;span class="highlight"&gt;</code> for
+        the name accent, three <code>&lt;section class="section-block"&gt;</code> elements, and
+        a <code>&lt;footer&gt;</code>.
+        </p>
+
+        <p><strong>past.html</strong><br>
+        Shares the same nav and footer pattern. Contains four
+        <code>&lt;section class="section-block"&gt;</code> elements covering homelabbing,
+        networking, self-hosted services, and web development. The self-hosted services section
+        includes a <code>&lt;table class="service-table"&gt;</code> with a
+        <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, and <code>&lt;tbody&gt;</code>
+        using <code>scope</code> attributes on header cells. Also contains an ordered list
+        of web development skills and a <code>&lt;figure&gt;</code> with an
+        <code>&lt;img&gt;</code> and <code>&lt;figcaption&gt;</code>.
+        </p>
+
+        <p><strong>future.html</strong><br>
+        Contains an intro paragraph and three
+        <code>&lt;section class="section-block"&gt;</code> elements. The "Areas of Interest"
+        section uses a <code>&lt;dl&gt;</code> definition list with six
+        <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> pairs. An unordered list covers
+        current steps being taken.
+        </p>
+
+        <p><strong>comments.html</strong><br>
+        This page. Contains five <code>&lt;section class="section-block"&gt;</code> elements
+        with descriptive text, two HTML tables (styles table and structure notes), and
+        an unordered list. All content is authored in semantic HTML with no inline styles.
+        </p>
+    </section>
+
+    <!-- CSS Styles Table -->
+    <section class="section-block">
+        <h2>CSS Styles Reference</h2>
+        <p>
+            All styles are defined in <code>websystems.css</code>. The table below documents
+            each selector, its type, what it does, and where it is applied.
+        </p>
+
+        <table class="styles-table">
+            <thead>
+                <tr>
+                    <th scope="col">Selector</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Used On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>#main-content</code></td>
+                    <td>ID</td>
+                    <td>Centers the page content and constrains it to a max-width of 900px with auto side margins.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.nav-bar</code></td>
+                    <td>Class</td>
+                    <td>Styles the top navigation bar with a dark background and consistent padding.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.nav-bar ul</code></td>
+                    <td>Descendant</td>
+                    <td>Removes list bullets and displays nav items in a horizontal flex row.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.nav-bar a</code></td>
+                    <td>Descendant</td>
+                    <td>Styles nav links with light text, no default underline, and a teal bottom-border on hover.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.nav-bar a:hover, .nav-bar a:focus</code></td>
+                    <td>Descendant + Pseudo-class</td>
+                    <td>Changes nav link colour to light teal and draws a teal underline on hover/focus.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.nav-bar a.active</code></td>
+                    <td>Descendant + Class</td>
+                    <td>Marks the current page link with the teal accent so users know where they are.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.page-header</code></td>
+                    <td>Class</td>
+                    <td>Styles the main h1 heading on each page — large bold text with a teal bottom border.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.highlight</code></td>
+                    <td>Class</td>
+                    <td>Inline accent applied to important words via a span — renders text in deep teal and bold.</td>
+                    <td>index.html, past.html, future.html</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block</code></td>
+                    <td>Class</td>
+                    <td>Adds top margin between content sections, and styles h2 headings within sections.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block h2</code></td>
+                    <td>Descendant</td>
+                    <td>Styles section subheadings as small-caps teal labels with letter-spacing.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block p</code></td>
+                    <td>Descendant</td>
+                    <td>Limits paragraph width to 72 characters for comfortable reading line length.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block ul, .section-block ol</code></td>
+                    <td>Descendant</td>
+                    <td>Adds consistent left padding to lists within section blocks.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block dl</code></td>
+                    <td>Descendant</td>
+                    <td>Adds bottom margin to the definition list container on the future page.</td>
+                    <td>future.html</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block dt</code></td>
+                    <td>Descendant</td>
+                    <td>Styles definition terms in bold teal with top margin to separate entries.</td>
+                    <td>future.html</td>
+                </tr>
+                <tr>
+                    <td><code>.section-block dd</code></td>
+                    <td>Descendant</td>
+                    <td>Indents definition descriptions and lightens their colour for visual hierarchy.</td>
+                    <td>future.html</td>
+                </tr>
+                <tr>
+                    <td><code>.service-table</code></td>
+                    <td>Class</td>
+                    <td>Styles the self-hosted services table on past.html — full width, collapsed borders, alternating row shading.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>.service-table th</code></td>
+                    <td>Descendant</td>
+                    <td>Dark header cells with white text for strong visual contrast.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>.service-table td</code></td>
+                    <td>Descendant</td>
+                    <td>Cell padding and a subtle bottom border to separate rows.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>.service-table tr:nth-child(even) td</code></td>
+                    <td>Descendant + Pseudo-class</td>
+                    <td>Alternating row background for improved scannability.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>.service-table tr:hover td</code></td>
+                    <td>Descendant + Pseudo-class</td>
+                    <td>Highlights the hovered row in a light teal tint.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>.styles-table</code></td>
+                    <td>Class</td>
+                    <td>Styles the CSS documentation table on this page — teal header, alternating rows.</td>
+                    <td>comments.html</td>
+                </tr>
+                <tr>
+                    <td><code>.styles-table th</code></td>
+                    <td>Descendant</td>
+                    <td>Teal header cells with white text to distinguish this table from the service table.</td>
+                    <td>comments.html</td>
+                </tr>
+                <tr>
+                    <td><code>.styles-table td</code></td>
+                    <td>Descendant</td>
+                    <td>Cell padding and bottom border for this table's data cells.</td>
+                    <td>comments.html</td>
+                </tr>
+                <tr>
+                    <td><code>.intro-lead</code></td>
+                    <td>Class</td>
+                    <td>Slightly larger introductory paragraph under the page heading, adds vertical spacing.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>.img-caption</code></td>
+                    <td>Class</td>
+                    <td>Small grey text beneath the homelab image for attribution and description.</td>
+                    <td>past.html</td>
+                </tr>
+                <tr>
+                    <td><code>body</code></td>
+                    <td>Element</td>
+                    <td>Sets base font (system stack), background colour, text colour, and line height for all pages.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>footer</code></td>
+                    <td>Element</td>
+                    <td>Dark footer bar with centred muted text — consistent across all pages.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>a</code></td>
+                    <td>Element</td>
+                    <td>Global link colour (teal) and underline for in-body text links.</td>
+                    <td>All pages</td>
+                </tr>
+                <tr>
+                    <td><code>@media (max-width: 600px)</code></td>
+                    <td>Media query</td>
+                    <td>Stacks nav links vertically and reduces font sizes on narrow screens.</td>
+                    <td>All pages</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Graphic design discussion -->
+    <section class="section-block">
+        <h2>Graphic Design Rationale</h2>
+
+        <p><strong>Colour palette:</strong>
+        The background is off-white (<code>#f9f9f9</code>) rather than pure white to reduce
+        eye strain on bright screens. Body text uses near-black (<code>#1a1a1a</code>) for high
+        contrast without the harshness of 100% black. The accent colour is deep teal
+        (<code>#2a7a7a</code>), which provides strong contrast against both the light background
+        and the dark navigation bar while feeling distinct from the generic blues most sites use.
+        Teal was chosen specifically because it reads as technical and deliberate — appropriate
+        for a site about IT and cybersecurity.
+        </p>
+
+        <p><strong>Typography:</strong>
+        The site uses a system font stack (<code>-apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif</code>). This means no external font requests,
+        faster load times, no dependency on third-party CDNs, and a familiar, legible reading
+        experience on every platform. Body text is set at 1rem (browser default, typically 16px)
+        with a line-height of 1.7 to give text room to breathe.
+        </p>
+
+        <p><strong>Layout and whitespace:</strong>
+        Content is constrained to a 900px maximum width and centred with auto margins. This
+        prevents uncomfortably long line lengths on wide monitors. Paragraphs are further
+        limited to 72 characters via <code>max-width: 72ch</code>, which is within the
+        typographic sweet spot of 60–75 characters per line. Generous section spacing
+        (<code>margin-top: 2.5rem</code>) separates distinct content areas without needing
+        dividers or decorative elements.
+        </p>
+
+        <p><strong>Navigation:</strong>
+        The nav bar uses a dark background (<code>#1a1a1a</code>) that contrasts strongly with
+        the page. The active page link is visually differentiated using the teal accent colour
+        and a bottom border, giving users a clear sense of where they are in the site at all times.
+        </p>
+    </section>
+
+    <!-- Accessibility -->
+    <section class="section-block">
+        <h2>Accessibility</h2>
+
+        <p><strong>Alt text:</strong>
+        Every image on the site has a descriptive <code>alt</code> attribute. The homelab
+        diagram on past.html has alt text that describes the content of the image so that
+        users who cannot see the image — including screen reader users and those browsing
+        with images disabled — still understand what is being represented.
+        </p>
+
+        <p><strong>Semantic structure:</strong>
+        Pages use semantic HTML5 elements: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+        <code>&lt;section&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>,
+        <code>&lt;footer&gt;</code>, and <code>&lt;dl&gt;</code>/<code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code>.
+        Heading levels are used in strict hierarchical order (h1 &rarr; h2). Tables use
+        <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;caption&gt;</code>,
+        and <code>scope</code> attributes on <code>&lt;th&gt;</code> cells so that screen
+        readers can announce column context correctly.
+        </p>
+
+        <p><strong>CSS disabled:</strong>
+        With CSS turned off, the site degrades gracefully. All content remains fully readable
+        and navigable because it is structured in semantic HTML. The navigation becomes a
+        plain vertical list of links, headings are rendered in the browser's default heading
+        styles, and tables remain tabular. No information is conveyed purely through visual
+        styling — the structure itself carries the meaning.
+        </p>
+
+        <p><strong>Keyboard navigation:</strong>
+        All interactive elements (links) are reachable via Tab key. Focus states are styled
+        with the same teal accent as hover states so that keyboard users receive the same
+        visual feedback as mouse users.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Immanuel Lam &mdash; UTS Web Systems Assignment &mdash; 2025</p>
+</footer>
+
+</body>
+</html>

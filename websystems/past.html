@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immanuel Lam — Past</title>
+    <link rel="stylesheet" href="websystems.css">
+</head>
+<body>
+
+<nav class="nav-bar" aria-label="Site navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="past.html" class="active">Past</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="comments.html">Comments</a></li>
+    </ul>
+</nav>
+
+<div id="main-content">
+
+    <h1 class="page-header">Background</h1>
+
+    <p class="intro-lead">
+        I got into computers pretty young, mostly by breaking things and having to fix them.
+        At some point that turned into an actual home lab, which I'm still not sure was a
+        good idea financially.
+    </p>
+
+    <!-- Homelabbing -->
+    <section class="section-block">
+        <h2>Homelabbing</h2>
+        <p>
+            It started with an old desktop I wasn't using, a few Docker containers, and a
+            YouTube rabbit hole about self-hosting. That was a few years ago. Now it's a
+            proper rack with a NAS, a couple of servers, a managed switch, and way too many
+            ethernet cables running through the walls.
+        </p>
+        <figure>
+            <img src="images/homelab.svg" alt="Diagram of Immanuel's home lab network showing server, switches, VLANs, and self-hosted services" width="640">
+            <figcaption class="img-caption">
+                Home lab network diagram — created by Immanuel Lam.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Networking -->
+    <section class="section-block">
+        <h2>Networking</h2>
+        <p>
+            I run a <span class="highlight">Ubiquiti UniFi</span> setup at home — Dream Machine,
+            managed switches, a couple of APs. The main thing I've been doing with it is VLAN
+            segmentation, mostly because I don't trust my smart TV on the same network as
+            everything else. IoT devices go on their own VLAN and can't talk to anything.
+        </p>
+        <p>
+            Other stuff I've set up or learned along the way:
+        </p>
+        <ul>
+            <li>VLAN segmentation (IoT, trusted, guest, management)</li>
+            <li>DNS-over-HTTPS and local DNS resolution with Pi-hole</li>
+            <li>Reverse proxies (Nginx Proxy Manager, Traefik)</li>
+            <li>Wireguard VPN for remote access</li>
+            <li>Port forwarding, NAT, and firewall rules</li>
+        </ul>
+    </section>
+
+    <!-- Self-hosted services -->
+    <section class="section-block">
+        <h2>Self-Hosted Services</h2>
+        <p>
+            Most of this started because I didn't want to pay for things I could run myself,
+            or I wanted to keep my data off someone else's server. Some of it is still running.
+            Nextcloud technically works but I haven't touched it in months.
+        </p>
+
+        <table class="service-table">
+            <caption>Self-Hosted Services</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Service</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Tech / Stack</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vaultwarden</td>
+                    <td>Self-hosted Bitwarden-compatible password manager</td>
+                    <td>Docker, Rust, SQLite</td>
+                </tr>
+                <tr>
+                    <td>Nginx Proxy Manager</td>
+                    <td>Reverse proxy with GUI and automatic SSL via Let's Encrypt</td>
+                    <td>Docker, Nginx, Certbot</td>
+                </tr>
+                <tr>
+                    <td>Pi-hole</td>
+                    <td>Network-level ad and tracker blocking with local DNS</td>
+                    <td>Raspberry Pi, dnsmasq</td>
+                </tr>
+                <tr>
+                    <td>Nextcloud</td>
+                    <td>Self-hosted file sync and collaboration platform</td>
+                    <td>Docker, PHP, MariaDB</td>
+                </tr>
+                <tr>
+                    <td>Portainer</td>
+                    <td>Container management UI for Docker environments</td>
+                    <td>Docker, Go</td>
+                </tr>
+                <tr>
+                    <td>Wireguard</td>
+                    <td>Fast, modern VPN tunnel for secure remote access</td>
+                    <td>Linux kernel module</td>
+                </tr>
+                <tr>
+                    <td>Uptime Kuma</td>
+                    <td>Self-hosted status and uptime monitoring dashboard</td>
+                    <td>Docker, Node.js, SQLite</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Web Development -->
+    <section class="section-block">
+        <h2>Web development</h2>
+        <p>
+            I picked up web dev because I needed dashboards and frontends for my self-hosted
+            stuff. Started with plain HTML and CSS, then JavaScript when I needed things to
+            actually do things. I've used React for a couple of personal projects and Flask
+            for backend APIs. Nothing production, just personal stuff.
+        </p>
+        <ol>
+            <li>HTML5 and CSS3</li>
+            <li>JavaScript (DOM, fetch)</li>
+            <li>React (personal projects)</li>
+            <li>Python / Flask</li>
+            <li>Git</li>
+        </ol>
+        <p>
+            This site is plain HTML and CSS with no JavaScript. Partly because the brief said
+            so, partly because it's a good constraint.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Immanuel Lam &mdash; UTS Web Systems Assignment &mdash; 2025</p>
+</footer>
+
+</body>
+</html>
