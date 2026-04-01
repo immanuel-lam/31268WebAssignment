@@ -81,6 +81,14 @@ body {
     margin-top: 0;
 }
 
+.content-area img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px 0;
+    border: 1px solid #cccccc;
+}
+
 /* intro box */
 .intro-box {
     background-color: #eaf3fb;
