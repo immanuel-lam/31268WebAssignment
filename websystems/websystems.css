@@ -85,6 +85,16 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
+.main-content img {
+    max-width: 300px;
+    display: block;
+    margin: 8px 0;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
 .main-content h2 {
     font-size: 13px;
     font-weight: bold;
