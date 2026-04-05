@@ -153,6 +153,14 @@ pre {
     padding: 15px;
     font-size: 0.88em;
     line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    font-size: 0.9em;
+    border: 1px solid #dddddd;
 }
 
 /* footer */
