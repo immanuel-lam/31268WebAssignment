@@ -179,3 +179,9 @@ h1, h2, h3 {
 p {
     line-height: 1.7;
 }
+
+h3 {
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-top: 20px;
+}
