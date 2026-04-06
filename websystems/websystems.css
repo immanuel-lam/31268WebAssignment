@@ -45,6 +45,9 @@ body {
     padding: 4px 6px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #808080;
+    /* needed position relative so the window buttons could use position absolute */
+    position: relative;
+    min-height: 30px;
 }
 
 .top-nav ul {
@@ -73,6 +76,14 @@ body {
 
 .top-nav ul li a:hover {
     background-color: #bab6ae;
+}
+
+.top-nav ul li a.current {
+    background-color: #b8b4ac;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 .main-content {
