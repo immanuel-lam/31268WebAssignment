@@ -63,6 +63,11 @@ body {
     color: #ffffff;
 }
 
+.nav-bar ul li a.active {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
 /* content area */
 .content-area {
     padding: 28px 35px;
