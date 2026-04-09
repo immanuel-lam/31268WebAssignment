@@ -52,19 +52,18 @@
         <p>This means all four pages share the same styles. Any style change only needs to be
         made in one place.</p>
 
-        <p>Site map:</p>
+        <p>Site map (every page links to every other page via the nav bar):</p>
 
 <pre>
-+----------------+
-|   index.html   |  &lt;-- Home page
-+----------------+
-        |
-        | (nav links present on every page)
-        |
-  +-----+------+----------+
-  |            |           |
-  v            v           v
-past.html  future.html  comments.html
+  index.html ------- past.html
+      |    \         /    |
+      |     \       /     |
+      |      \     /      |
+      |       \   /       |
+      v        \ /        v
+  future.html --- comments.html
+
+  (nav bar on every page links to all four pages)
 </pre>
 
         <!-- section b -->
@@ -191,7 +190,7 @@ past.html  future.html  comments.html
             <tr>
                 <td><code>.content-area img</code></td>
                 <td>Descendant</td>
-                <td>Makes images responsive (max-width: 100%), block display, adds a small border and consistent margin</td>
+                <td>Caps image width at 380px so photos don't dominate the page, block display, adds a small border and consistent margin</td>
                 <td>index.html</td>
             </tr>
             <tr>
@@ -270,7 +269,7 @@ past.html  future.html  comments.html
                 <td><code>h3</code></td>
                 <td>Element</td>
                 <td>Sub-headings inside sections, 1.1em, same dark colour as h2 but smaller</td>
-                <td>All pages</td>
+                <td>comments.html</td>
             </tr>
             <tr>
                 <td><code>.footer-text</code></td>
@@ -349,9 +348,7 @@ past.html  future.html  comments.html
         The blue bottom border on section headings is simple but adds some structure.</p>
 
         <h3>What could be improved</h3>
-        <p>The site is pretty minimal. I could have made it more interesting with more time.
-        The photo on the home page is also just a placeholder, I'd swap it out for a real one
-        before submitting.</p>
+        <p>The site is pretty minimal. I could have made it more interesting with more time.</p>
 
         <!-- section e -->
         <h2>e) Accessibility</h2>
@@ -360,11 +357,11 @@ past.html  future.html  comments.html
 
         <p>The image on index.html has an alt attribute:</p>
 
-        <pre>&lt;img src="images/me.png" alt="A placeholder image"&gt;</pre>
+        <pre>&lt;img src="images/me.png" alt="A photo of me and friends playing pool"&gt;</pre>
 
-        <p>For the actual submission this would describe the real photo, something like "A photo
-        of me at the UTS campus". The alt text matters because screen readers read it aloud for
-        visually impaired users and it also shows up if the image can't load.</p>
+        <p>The alt text describes what the photo actually shows. This matters because screen
+        readers read it aloud for visually impaired users and it also shows up if the image
+        can't load.</p>
 
         <h3>CSS Disabled Test</h3>
 
