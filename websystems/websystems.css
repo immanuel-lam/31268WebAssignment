@@ -87,7 +87,7 @@ body {
 }
 
 .content-area img {
-    max-width: 100%;
+    max-width: 380px;
     height: auto;
     display: block;
     margin: 16px 0;
