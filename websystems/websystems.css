@@ -78,6 +78,71 @@ body {
     background-color: #bab6ae;
 }
 
+/* window buttons - pinned to right side of toolbar */
+.win-buttons {
+    /* position absolute so they sit at the far right regardless of nav links */
+    position: absolute;
+    right: 6px;
+    top: 4px;
+}
+
+.btn-minimize {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
+    border-top: 1px solid #8ec0f0;
+    border-left: 1px solid #6da3e2;
+    border-right: 1px solid #1a3d7c;
+    border-bottom: 1px solid #1a3d7c;
+}
+
+.btn-maximize {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
+    border-top: 1px solid #8ec0f0;
+    border-left: 1px solid #6da3e2;
+    border-right: 1px solid #1a3d7c;
+    border-bottom: 1px solid #1a3d7c;
+}
+
+.btn-close {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #e86060, #c02020);
+    border-top: 1px solid #f09090;
+    border-left: 1px solid #e86060;
+    border-right: 1px solid #901010;
+    border-bottom: 1px solid #901010;
+}
+
 .top-nav ul li a.current {
     background-color: #b8b4ac;
     border-top: 1px solid #808080;
