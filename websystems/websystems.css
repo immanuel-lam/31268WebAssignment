@@ -124,6 +124,16 @@ body {
     border-bottom: 1px solid #1a3d7c;
 }
 
+/* the unicode square character looked too thin so I used ::before to draw it instead, found this on w3schools */
+.btn-maximize::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #ffffff;
+    vertical-align: middle;
+}
+
 .btn-close {
     display: inline-block;
     width: 21px;
