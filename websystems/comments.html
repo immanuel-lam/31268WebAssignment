@@ -251,6 +251,36 @@
                 <td>comments.html</td>
             </tr>
             <tr>
+                <td><code>.win-buttons</code></td>
+                <td>Class</td>
+                <td>Container div for the three window control buttons. Position: absolute with right: 6px, top: 4px inside the nav bar (which has position: relative) so they always sit pinned to the far right of the toolbar.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.btn-minimize</code></td>
+                <td>Class</td>
+                <td>Minimize button: 21x21px inline-block, blue gradient top to bottom, raised border (light top-left, dark bottom-right). Shows an en dash character.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.btn-maximize</code></td>
+                <td>Class</td>
+                <td>Maximize button: same size and blue gradient as minimize. The span is empty - the square icon is drawn by the .btn-maximize::before pseudo-element instead of a Unicode character, because the Unicode square rendered too thin.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.btn-maximize::before</code></td>
+                <td>Pseudo-element</td>
+                <td>Draws a 9x9px white outlined square inside the maximize button using content: "" with a 2px solid white border. Vertically centred with vertical-align: middle.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.btn-close</code></td>
+                <td>Class</td>
+                <td>Close button: same size as the other buttons but with a red gradient (#e86060 to #c02020) and matching red raised border. Shows a multiplication sign character.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
                 <td><code>.page-footer</code></td>
                 <td>Class</td>
                 <td>Styled like a Windows status bar: same grey as the toolbar (#d4d0c8), black text, 3px 8px padding, white top border, left-aligned text, 11px font</td>
@@ -326,9 +356,8 @@
         that fits the theme.</p>
 
         <h3>What could be better</h3>
-        <p>A real XP window would have min/max/close buttons in the toolbar and a window icon
-        on the left of the title bar. These could be added with more CSS work. The fonts on
-        the page depend on Tahoma being installed which isn't guaranteed on every system.</p>
+        <p>A real XP window would have a window icon on the left of the title bar. The fonts
+        on the page depend on Tahoma being installed which isn't guaranteed on every system.</p>
 
         <!-- section e -->
         <h2>e) Accessibility</h2>
