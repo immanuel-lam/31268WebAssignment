@@ -2,43 +2,42 @@
 /* Web Systems Assignment - Immanuel */
 
 body {
-    background-color: #e8e8e8;
+    background-color: #ebebeb;
     font-family: Arial, sans-serif;
-    color: #222222;
+    color: #1a1a1a;
     margin: 0;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 #page-wrap {
-    width: 880px;
+    width: 860px;
     margin: 0 auto;
     background-color: #ffffff;
-    border: 1px solid #bbbbbb;
+    border: 1px solid #cccccc;
 }
 
 /* header */
 .site-header {
-    background-color: #2a5298;
+    background-color: #1f5252;
     color: #ffffff;
-    padding: 18px 22px;
+    padding: 20px 24px;
 }
 
 .site-header h1 {
-    margin: 0;
-    font-size: 24px;
+    margin: 0 0 4px 0;
+    font-size: 22px;
 }
 
 .site-header p {
-    margin: 4px 0 0 0;
+    margin: 0;
     font-size: 13px;
-    color: #adc6e8;
+    color: #99cccc;
 }
 
-/* navigation - light background with blue links */
+/* nav */
 .top-nav {
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #2a5298;
-    padding: 0 10px;
+    background-color: #163d3d;
+    padding: 0;
 }
 
 .top-nav ul {
@@ -53,37 +52,35 @@ body {
 
 .top-nav ul li a {
     display: inline-block;
-    color: #2a5298;
+    color: #cceeee;
     text-decoration: none;
-    padding: 8px 14px;
+    padding: 9px 16px;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .top-nav ul li a:hover {
-    background-color: #2a5298;
+    background-color: #2e7a7a;
     color: #ffffff;
 }
 
 .top-nav ul li a.current {
-    background-color: #2a5298;
+    background-color: #2e7a7a;
     color: #ffffff;
 }
 
-/* main content */
+/* content */
 .main-content {
-    padding: 20px 25px;
+    padding: 20px 26px;
 }
 
 .main-content h2 {
-    color: #2a5298;
-    font-size: 1.25em;
+    color: #1f5252;
+    font-size: 1.2em;
     margin-top: 20px;
 }
 
 .main-content img {
-    max-width: 350px;
-    height: auto;
+    max-width: 340px;
     border: 1px solid #cccccc;
     display: block;
     margin: 10px 0;
@@ -91,27 +88,26 @@ body {
 
 /* intro box on home page */
 .intro-block {
-    background-color: #eef3fb;
-    border: 1px solid #adc6e8;
-    padding: 12px 16px;
+    background-color: #eef6f6;
+    padding: 12px 15px;
     margin: 12px 0;
 }
 
-/* used on spans to highlight words */
+/* span to highlight words */
 .emph {
     font-weight: bold;
-    color: #2a5298;
+    color: #1f5252;
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
+    width: 100%;
     margin: 12px 0;
     font-size: 14px;
 }
 
 th {
-    background-color: #2a5298;
+    background-color: #1f5252;
     color: #ffffff;
     padding: 8px 10px;
     text-align: left;
@@ -119,7 +115,7 @@ th {
 
 td {
     padding: 7px 10px;
-    border: 1px solid #aaaaaa;
+    border: 1px solid #bbbbbb;
 }
 
 ul, ol {
@@ -127,21 +123,21 @@ ul, ol {
 }
 
 a {
-    color: #2a5298;
+    color: #1f5252;
 }
 
 a:hover {
-    color: #1a3a7a;
+    color: #163d3d;
 }
 
 a:visited {
     color: #7744aa;
 }
 
-/* for code snippets in comments page */
+/* code blocks on comments page */
 pre {
     background-color: #f5f5f5;
-    border: 1px solid #cccccc;
+    border: 1px solid #dddddd;
     padding: 10px;
     white-space: pre-wrap;
     font-size: 13px;
@@ -149,14 +145,14 @@ pre {
 
 code {
     background-color: #f5f5f5;
-    border: 1px solid #cccccc;
+    border: 1px solid #dddddd;
     padding: 1px 4px;
     font-size: 13px;
 }
 
 .page-footer {
-    background-color: #2a5298;
-    color: #adc6e8;
+    background-color: #163d3d;
+    color: #88bbbb;
     text-align: center;
     padding: 10px;
     font-size: 13px;
@@ -167,7 +163,7 @@ p {
 }
 
 h3 {
-    color: #2a5298;
+    color: #1f5252;
     font-size: 1em;
-    margin-top: 16px;
+    margin-top: 15px;
 }
