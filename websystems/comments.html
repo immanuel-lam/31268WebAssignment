@@ -41,18 +41,18 @@
             <li><strong>comments.html</strong>: this page, design reflection</li>
         </ul>
 
-        <p>All four pages are linked together through the navigation bar at the top of every
-        page. You can get to any page from any other page without needing the back button.</p>
+        <p>All four pages are linked through the navigation bar at the top of every page.
+        You can get to any page from any other page without using the back button.</p>
 
-        <p>The CSS is in a single external stylesheet called <strong>websystems.css</strong>,
-        linked from every page using:</p>
+        <p>The CSS is in one external file called <strong>websystems.css</strong>, linked from
+        every page with:</p>
 
         <pre>&lt;link rel="stylesheet" type="text/css" href="websystems.css"&gt;</pre>
 
-        <p>This means all four pages share the same styles. Any style change only needs to be
-        made in one place.</p>
+        <p>This keeps all styles in one place so changing a style automatically affects
+        all pages.</p>
 
-        <p>Site map (every page links to every other page via the nav bar):</p>
+        <p>Site map (all pages link to each other through the nav bar):</p>
 
         <!-- site map diagram made by me in Figma, exported as PNG -->
         <img src="images/sitemap.png" alt="Site map diagram showing all four pages connected to each other">
@@ -60,33 +60,32 @@
         <!-- section b -->
         <h2>b) Internal Structure of Each Page</h2>
 
-        <p>Every page follows the same basic structure:</p>
+        <p>Every page uses the same structure:</p>
 
 <pre>
-&lt;div id="page-wrap"&gt;            -- outer container, sets the width to 900px
+&lt;div id="page-wrap"&gt;             -- outer container, 880px wide, centred
     &lt;header class="site-header"&gt; -- site title and subtitle
     &lt;nav class="top-nav"&gt;        -- navigation links
     &lt;div class="main-content"&gt;   -- main page content
-    &lt;footer class="page-footer"&gt; -- footer line
+    &lt;footer class="page-footer"&gt; -- footer
 &lt;/div&gt;
 </pre>
 
-        <p>I used semantic HTML5 elements (header, nav, footer) because they describe
-        what the content actually is. For the main content area I used a div with a class
-        since the rubric required at least one div. It also helps screen readers and keeps
-        the HTML easier to read.</p>
+        <p>I used HTML5 semantic elements (header, nav, footer) where the element name actually
+        describes what the content is. The main content area uses a div with a class because
+        the rubric required at least one div, and div is the right element for a generic
+        content container.</p>
 
-        <p>The <strong>index.html</strong> page has a heading, an intro-block div, an image,
-        and two unordered lists plus a short paragraph with links to the other pages.
-        <strong>past.html</strong> has several sections with paragraphs, a timeline table,
-        and two lists. <strong>future.html</strong> is similar to past.html with a table for
-        certifications and lists for goal areas. <strong>comments.html</strong> (this page) is
-        the longest, mostly prose sections and one big CSS table.</p>
+        <p><strong>index.html</strong> has a heading, an intro-block div, a photo, and two
+        unordered lists plus a paragraph linking to the other pages. <strong>past.html</strong>
+        has several sections with a timeline table and two lists. <strong>future.html</strong>
+        is similar with a certifications table and lists. <strong>comments.html</strong>
+        (this page) is the longest page, with a big selector table and several sections.</p>
 
         <!-- section c -->
         <h2>c) Styles Used</h2>
 
-        <p>All styles are in websystems.css. Here is a breakdown of every selector:</p>
+        <p>All styles are in websystems.css. The table below covers every selector:</p>
 
         <table>
             <tr>
@@ -98,169 +97,169 @@
             <tr>
                 <td><code>body</code></td>
                 <td>Element</td>
-                <td>Sets base font (Arial), background colour (#dddddd), default text colour (#111111), removes default margin and padding</td>
+                <td>Sets font to Arial, light grey background (#e8e8e8), dark text colour (#222222), removes margin, adds 15px top and bottom padding so there's a gap around the white content box</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>#page-wrap</code></td>
                 <td>ID</td>
-                <td>Sets the page to 900px wide and centres it with auto margins. Sets white background so the content area stands out from the grey body background.</td>
+                <td>Sets the page to 880px wide, centred with auto margins, white background, thin grey border around the whole thing</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header</code></td>
                 <td>Class</td>
-                <td>Dark navy background (#1b3a5c), white text, centred, padding around the title area</td>
+                <td>Blue background (#2a5298), white text, 18px top/bottom and 22px side padding</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header h1</code></td>
                 <td>Descendant</td>
-                <td>Sets the h1 size to 26px inside the header and removes the default margin</td>
+                <td>Sets h1 to 24px and removes default margin so it sits tight inside the header</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header p</code></td>
                 <td>Descendant</td>
-                <td>Makes the subtitle smaller (13px) and light grey (#9ab0c8) so it reads as secondary text under the main title</td>
+                <td>Subtitle text is 13px and light blue (#adc6e8) so it reads as secondary text under the main title</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav</code></td>
                 <td>Class</td>
-                <td>Slightly darker navy (#12293f) for the nav bar, sits directly below the header</td>
+                <td>Light grey background (#f4f4f4) with a 2px blue bottom border. This makes the nav look lighter/different to the header instead of being another dark band.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul</code></td>
                 <td>Descendant</td>
-                <td>Removes the default bullet points and padding from the list inside the nav</td>
+                <td>Removes bullet points and default padding from the list inside the nav</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li</code></td>
                 <td>Descendant</td>
-                <td>Makes each list item display inline so the nav links sit side by side</td>
+                <td>Sets list items to display inline so the nav links sit side by side</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a</code></td>
                 <td>Descendant</td>
-                <td>Styles the nav links: white text, no underline, 10px 16px padding, 14px font size, block display so the whole area is clickable</td>
+                <td>Blue text (#2a5298), bold, no underline, inline-block with padding so the clickable area is a reasonable size. Font size 14px.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a:hover</code></td>
                 <td>Pseudo-class</td>
-                <td>Highlights the nav link in blue (#1e6fa0) when the mouse is over it</td>
+                <td>Inverts the colours on hover: blue background with white text, so the link is clearly highlighted</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a.current</code></td>
                 <td>Compound (class + descendant)</td>
-                <td>Keeps the current page's nav link highlighted in blue so you can see which page you're on</td>
+                <td>Same blue fill as the hover state, applied to the link for the current page so you can see where you are</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content</code></td>
                 <td>Class</td>
-                <td>Adds 22px top/bottom and 30px side padding around the content, minimum height 380px so short pages don't look too empty</td>
+                <td>20px top/bottom padding, 25px sides. Applied to the div that holds the main page content.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content h2</code></td>
                 <td>Descendant</td>
-                <td>Section headings are dark navy (#1b3a5c), 1.3em, with a 1px solid navy border underneath as a divider</td>
+                <td>Section headings in blue (#2a5298), 1.25em. No border — just the colour is enough to make them stand out.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content img</code></td>
                 <td>Descendant</td>
-                <td>Caps image width at 360px, block display, light grey border, margin top and bottom</td>
+                <td>Max-width 350px, block display, thin grey border, 10px margin top and bottom</td>
                 <td>index.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>.intro-block</code></td>
                 <td>Class</td>
-                <td>Light blue background (#eaf1f8) with a left blue border, used to make the intro paragraph on the home page stand out from the rest</td>
+                <td>Light blue background (#eef3fb) with a border in a slightly darker blue (#adc6e8) all the way around. Used to set the intro paragraph apart on the home page.</td>
                 <td>index.html</td>
             </tr>
             <tr>
                 <td><code>.emph</code></td>
                 <td>Class</td>
-                <td>Applied to span elements to colour specific words blue (#1e6fa0) and make them bold</td>
+                <td>Bold text in the same blue as the headings. Applied to span elements to highlight specific words.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>table</code></td>
                 <td>Element</td>
-                <td>Full width, collapsed borders, 14px font size, margin above and below</td>
+                <td>Full width, collapsed borders so cells share one border line, 14px font, margin above and below</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>th</code></td>
                 <td>Element</td>
-                <td>Table headers get the same dark navy as the header, white text, left-aligned with padding, and a matching navy border</td>
+                <td>Table headers get the blue background (#2a5298) matching the site header, white text, padding, left-aligned</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>td</code></td>
                 <td>Element</td>
-                <td>Table cells have 7px 10px padding and a 1px solid grey border</td>
+                <td>Table cells have 7px 10px padding and a 1px grey border</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>ul, ol</code></td>
                 <td>Grouped element</td>
-                <td>Line-height 1.8 on all lists for readability, consistent left padding</td>
+                <td>Line-height 1.75 on lists to give them some breathing room</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a</code></td>
                 <td>Element</td>
-                <td>Sets the default link colour to the same blue accent (#1e6fa0) used in the nav and intro block</td>
+                <td>Sets link colour to the same blue (#2a5298) used across the site</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a:hover</code></td>
                 <td>Pseudo-class</td>
-                <td>Adds an underline on hover so it's clear the link is interactive</td>
+                <td>Darkens the link on hover (#1a3a7a) so there's a visible change</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a:visited</code></td>
                 <td>Pseudo-class</td>
-                <td>Visited links go purple (#6b3a8c) so you can tell which pages you have already been to</td>
+                <td>Visited links turn purple (#7744aa) so you can tell which pages you've already been to</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>pre</code></td>
                 <td>Element</td>
-                <td>Light grey background, small border, padded, white-space: pre-wrap so long lines wrap instead of overflowing. Used for code snippets and the structure diagram on this page.</td>
+                <td>Light grey background, border, padding, white-space: pre-wrap so code lines wrap instead of overflowing. Used on this page for the HTML structure diagram and link snippets.</td>
                 <td>comments.html</td>
             </tr>
             <tr>
                 <td><code>code</code></td>
                 <td>Element</td>
-                <td>Inline code: same light grey and border as pre, small padding, 13px font</td>
+                <td>Inline code: same grey background and border as pre, with small padding. Used in the selector table on this page.</td>
                 <td>comments.html</td>
             </tr>
             <tr>
                 <td><code>.page-footer</code></td>
                 <td>Class</td>
-                <td>Same dark navy as the nav bar, muted grey text, centred, 13px font, padding</td>
+                <td>Same blue as the header (#2a5298), light blue text, centred, 13px, 10px padding. The footer matches the header so the page has matching top and bottom bands.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>p</code></td>
                 <td>Element</td>
-                <td>Sets line-height 1.65 on all paragraphs so they're easier to read</td>
+                <td>Line-height 1.6 on all paragraphs for readability</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>h3</code></td>
                 <td>Element</td>
-                <td>Sub-headings inside sections, same dark navy colour as h2 but smaller (1.05em)</td>
+                <td>Sub-headings: same blue as h2, 1em size so they're slightly smaller than the h2 section headings</td>
                 <td>comments.html</td>
             </tr>
         </table>
@@ -270,61 +269,64 @@
 
         <h3>Colour Choices</h3>
 
-        <p>I went with dark navy because it felt right for a cybersecurity site. The colours I used:</p>
+        <p>I used a royal blue (#2a5298) as the main colour throughout — for the header, footer,
+        nav links, h2 headings and table headers. I picked it because I wanted a blue that felt
+        a bit more personal than the generic dark navy you see on a lot of websites. All the blue
+        elements use the same colour so the page feels consistent.</p>
+
+        <p>The specific colours used are:</p>
 
         <ul>
-            <li><strong>#1b3a5c</strong>: dark navy, used for the header and h2 headings</li>
-            <li><strong>#12293f</strong>: darker navy, used for the nav bar and footer</li>
-            <li><strong>#1e6fa0</strong>: medium blue, accent colour for links and the intro block border</li>
-            <li><strong>#dddddd</strong>: light grey, body background behind the white content area</li>
+            <li><strong>#2a5298</strong>: royal blue, main accent, header, footer, nav links, headings, table headers</li>
+            <li><strong>#adc6e8</strong>: light blue, used for the subtitle in the header and footer text</li>
+            <li><strong>#e8e8e8</strong>: light grey, body background — sits behind the white content box</li>
             <li><strong>#ffffff</strong>: white, main content background</li>
-            <li><strong>#111111</strong>: near-black, body text</li>
+            <li><strong>#222222</strong>: near-black, body text</li>
+            <li><strong>#f4f4f4</strong>: very light grey, nav bar background</li>
         </ul>
 
-        <p>The light grey body background with a white content area in the middle makes the
-        structure visible without being distracting. The blue accent is used consistently across
-        the nav hover, the intro block border, links and h2 borders so the page feels like it
-        belongs together without being over-designed.</p>
+        <p>The nav bar uses a light grey background with blue text instead of a dark background
+        like the header. This means the page doesn't just have stacked dark bands at the top —
+        there's a visible difference between the header and the nav, which I think looks cleaner.</p>
 
-        <p>I also made sure none of the colour combinations are in the bad pairings list from
-        the brief (red on black, purple on black etc.).</p>
+        <p>I checked all my colour combinations against the bad pairings listed in the spec
+        (red on black, purple on black, etc.) — none of those combinations are used.</p>
 
         <h3>Font Choices</h3>
 
-        <p>I used Arial throughout (no fallback needed on most systems). Sizes:</p>
+        <p>Arial throughout. I didn't want to pull in any external fonts since the spec says
+        not to rely on third party resources. The size hierarchy is:</p>
 
         <ul>
-            <li><strong>h1 in header:</strong> 26px</li>
-            <li><strong>Nav links:</strong> 14px</li>
-            <li><strong>Section headings (h2):</strong> 1.3em</li>
-            <li><strong>Body text:</strong> inherited (16px browser default)</li>
+            <li><strong>h1 in header:</strong> 24px</li>
+            <li><strong>Nav links:</strong> 14px, bold</li>
+            <li><strong>Section headings (h2):</strong> 1.25em</li>
+            <li><strong>Sub-headings (h3):</strong> 1em</li>
+            <li><strong>Body text (p):</strong> inherited (16px browser default)</li>
             <li><strong>Footer and table text:</strong> 13px</li>
         </ul>
 
-        <p>I used a pixel size for the header h1 since it's a fixed element that shouldn't scale
-        with the surrounding text. The h2 headings use em so they stay proportional to the body
-        text size.</p>
-
         <h3>Layout</h3>
 
-        <p>I went with a single column layout set to 900px wide and centred on the page.
-        I used a fixed width rather than max-width so the layout doesn't change depending on
-        the screen width - it's simpler to predict how it looks. The structure is always
-        header, nav, content, footer in that order on every page.</p>
+        <p>Single column layout, 880px wide, centred on the page. The white content box sits
+        on the light grey body background so it stands out as its own box. I added 15px of
+        padding to the body top and bottom so there's a small gap above and below the white box
+        instead of it just running into the edge of the viewport.</p>
 
-        <p>Paragraph text is left-aligned. Headings in the header are centred but everything
-        in the content area is left-aligned, which is easier to read for longer text.</p>
+        <p>The structure on every page is: header, nav bar, content, footer in that order.
+        Text in the content area is left-aligned. The header is centred because it's a title
+        block but for normal reading the left-aligned text is easier.</p>
 
         <h3>What I think worked</h3>
-        <p>Using the same dark navy for the header and the section heading colour makes the
-        page feel consistent without needing to be clever about it. The intro block on the
-        home page with the blue left border is a small touch that I think makes that section
-        stand out without looking out of place.</p>
+        <p>Having the nav bar light instead of dark makes a real visual difference — it doesn't
+        look like a stacked dark header. The header and footer matching in blue creates a frame
+        around the content which I think looks intentional. Keeping one accent colour throughout
+        makes the site feel consistent without needing to think too hard about colour combinations.</p>
 
         <h3>What could be improved</h3>
-        <p>The layout is pretty basic. I kept it simple on purpose because I wanted to get
-        the structure right first, but I could have done more with spacing and maybe added
-        a bit more visual interest to the content pages.</p>
+        <p>The layout is very simple. I focused on getting the structure right and the styles
+        consistent. With more time I would have spent more effort on the spacing and maybe
+        added something to make the content pages less plain.</p>
 
         <!-- section e -->
         <h2>e) Accessibility</h2>
@@ -336,37 +338,35 @@
         <pre>&lt;img src="images/me.png" alt="A photo of me and friends playing pool"&gt;</pre>
 
         <p>The photo was taken by me so no external credit is needed. The alt text describes
-        what the image actually shows. This matters because screen readers read it aloud for
-        visually impaired users and it also shows up if the image fails to load.</p>
+        what the image actually shows. Screen readers read this aloud for visually impaired
+        users and it also shows up if the image fails to load.</p>
 
-        <p>The site map image on this page also has an alt attribute describing what it shows.</p>
+        <p>The site map image on this page also has descriptive alt text.</p>
 
         <h3>CSS Disabled Test</h3>
 
-        <p>I tested the site in Firefox with CSS turned off (View, Page Style, No Style).
-        With CSS off:</p>
+        <p>I tested in Firefox with CSS off (View, Page Style, No Style). With CSS disabled:</p>
 
         <ul>
-            <li>All content is still readable, it just loses its colours and formatting</li>
-            <li>The navigation links at the top of each page are still plain text links you can click,
-            so you can still move between all four pages</li>
-            <li>The tables on the past and future pages still render as normal HTML tables</li>
-            <li>Lists, headings and paragraphs still have the right logical structure</li>
-            <li>The page still makes sense as plain HTML. The order of elements (header, nav, content,
-            footer) still reflects the reading order</li>
+            <li>All content is still readable — it just loses colours and layout</li>
+            <li>The nav links at the top of each page still work as plain text links, so you
+            can still navigate between all four pages</li>
+            <li>Tables on past.html and future.html still render as normal HTML tables</li>
+            <li>Lists, headings and paragraphs keep their logical structure</li>
+            <li>The reading order (header, nav, content, footer) still makes sense as plain HTML</li>
         </ul>
 
-        <p>Using semantic HTML5 elements (header, nav, footer) means the structure is meaningful
-        without CSS, not just visual grouping.</p>
+        <p>Using semantic HTML5 elements (header, nav, footer) means the page has meaningful
+        structure even without CSS.</p>
 
         <h3>Other Accessibility Considerations</h3>
 
         <ul>
-            <li>Links use descriptive text rather than just "click here"</li>
-            <li>No JavaScript on the site so it works with JS disabled</li>
-            <li>Contrast is high throughout (dark text on white, white text on dark backgrounds)</li>
-            <li>No horizontal scrolling at normal window sizes</li>
-            <li>No flashing animations or effects</li>
+            <li>Links use descriptive text rather than "click here"</li>
+            <li>No JavaScript — site works with JS disabled</li>
+            <li>High contrast throughout: dark text on white, white/light text on blue backgrounds</li>
+            <li>No horizontal scrolling at normal sizes</li>
+            <li>No animations or flashing</li>
         </ul>
 
     </div>

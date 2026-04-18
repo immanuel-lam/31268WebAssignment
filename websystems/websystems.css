@@ -1,120 +1,120 @@
 /* websystems.css */
-/* Immanuel - Web Systems Assignment */
+/* Web Systems Assignment - Immanuel */
 
 body {
-    background-color: #dddddd;
+    background-color: #e8e8e8;
     font-family: Arial, sans-serif;
-    color: #111111;
+    color: #222222;
     margin: 0;
-    padding: 0;
+    padding: 15px 0;
 }
 
-/* main page wrapper, centres content and limits width */
 #page-wrap {
-    width: 900px;
-    margin: 0 auto 20px auto;
+    width: 880px;
+    margin: 0 auto;
     background-color: #ffffff;
+    border: 1px solid #bbbbbb;
 }
 
+/* header */
 .site-header {
-    background-color: #1b3a5c;
+    background-color: #2a5298;
     color: #ffffff;
-    padding: 20px 25px;
-    text-align: center;
+    padding: 18px 22px;
 }
 
 .site-header h1 {
-    font-size: 26px;
     margin: 0;
+    font-size: 24px;
 }
 
 .site-header p {
-    margin: 5px 0 0 0;
+    margin: 4px 0 0 0;
     font-size: 13px;
-    color: #9ab0c8;
+    color: #adc6e8;
 }
 
-/* navigation */
+/* navigation - light background with blue links */
 .top-nav {
-    background-color: #12293f;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #2a5298;
+    padding: 0 10px;
 }
 
 .top-nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .top-nav ul li {
-    display: inline-block;
+    display: inline;
 }
 
 .top-nav ul li a {
-    display: block;
-    color: #ffffff;
+    display: inline-block;
+    color: #2a5298;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 8px 14px;
     font-size: 14px;
-}
-
-.top-nav ul li a:hover {
-    background-color: #1e6fa0;
-}
-
-.top-nav ul li a.current {
-    background-color: #1e6fa0;
-}
-
-/* main page content */
-.main-content {
-    padding: 22px 30px;
-    min-height: 380px;
-}
-
-.main-content h2 {
-    color: #1b3a5c;
-    font-size: 1.3em;
-    border-bottom: 1px solid #1b3a5c;
-    padding-bottom: 3px;
-    margin-top: 22px;
-}
-
-.main-content img {
-    max-width: 360px;
-    height: auto;
-    display: block;
-    border: 1px solid #bbbbbb;
-    margin: 12px 0;
-}
-
-/* intro paragraph box on home page */
-.intro-block {
-    background-color: #eaf1f8;
-    border-left: 3px solid #1e6fa0;
-    padding: 12px 16px;
-    margin: 14px 0;
-}
-
-/* span used to emphasise certain words */
-.emph {
-    color: #1e6fa0;
     font-weight: bold;
 }
 
-/* tables */
+.top-nav ul li a:hover {
+    background-color: #2a5298;
+    color: #ffffff;
+}
+
+.top-nav ul li a.current {
+    background-color: #2a5298;
+    color: #ffffff;
+}
+
+/* main content */
+.main-content {
+    padding: 20px 25px;
+}
+
+.main-content h2 {
+    color: #2a5298;
+    font-size: 1.25em;
+    margin-top: 20px;
+}
+
+.main-content img {
+    max-width: 350px;
+    height: auto;
+    border: 1px solid #cccccc;
+    display: block;
+    margin: 10px 0;
+}
+
+/* intro box on home page */
+.intro-block {
+    background-color: #eef3fb;
+    border: 1px solid #adc6e8;
+    padding: 12px 16px;
+    margin: 12px 0;
+}
+
+/* used on spans to highlight words */
+.emph {
+    font-weight: bold;
+    color: #2a5298;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 14px 0;
+    margin: 12px 0;
     font-size: 14px;
 }
 
 th {
-    background-color: #1b3a5c;
+    background-color: #2a5298;
     color: #ffffff;
     padding: 8px 10px;
     text-align: left;
-    border: 1px solid #1b3a5c;
 }
 
 td {
@@ -122,32 +122,29 @@ td {
     border: 1px solid #aaaaaa;
 }
 
-/* lists */
 ul, ol {
-    line-height: 1.8;
-    padding-left: 22px;
+    line-height: 1.75;
 }
 
-/* links */
 a {
-    color: #1e6fa0;
+    color: #2a5298;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #1a3a7a;
 }
 
 a:visited {
-    color: #6b3a8c;
+    color: #7744aa;
 }
 
-/* used on comments page for code snippets */
+/* for code snippets in comments page */
 pre {
     background-color: #f5f5f5;
     border: 1px solid #cccccc;
-    padding: 12px;
-    font-size: 13px;
+    padding: 10px;
     white-space: pre-wrap;
+    font-size: 13px;
 }
 
 code {
@@ -157,26 +154,20 @@ code {
     font-size: 13px;
 }
 
-/* footer */
 .page-footer {
-    background-color: #12293f;
-    color: #888888;
+    background-color: #2a5298;
+    color: #adc6e8;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     font-size: 13px;
 }
 
 p {
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 h3 {
-    color: #1b3a5c;
-    font-size: 1.05em;
-    margin-top: 18px;
-}
-
-/* first h2 in content shouldn't have extra top margin */
-.main-content h2:first-child {
-    margin-top: 0;
+    color: #2a5298;
+    font-size: 1em;
+    margin-top: 16px;
 }
