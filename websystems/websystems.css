@@ -10,7 +10,6 @@ body {
     padding: 20px 0;
 }
 
-/* window frame */
 #page-wrap {
     width: 860px;
     margin: 0 auto;
@@ -20,12 +19,10 @@ body {
     outline: 1px solid #808080;
 }
 
-/* title bar */
 .site-header {
     background: linear-gradient(to right, #0a246a 0%, #3a6fb5 55%, #a6caf0 100%);
     color: #ffffff;
-    padding: 5px 80px 5px 8px;
-    position: relative;
+    padding: 5px 8px;
 }
 
 .site-header h1 {
@@ -41,50 +38,13 @@ body {
     margin: 2px 0 0 0;
 }
 
-/* window control buttons */
-.win-buttons {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-}
-
-.btn-minimize, .btn-maximize, .btn-close {
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    line-height: 19px;
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: default;
-    margin-left: 2px;
-    text-shadow: 1px 1px 0 #000033;
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.btn-minimize, .btn-maximize {
-    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
-    border-top: 1px solid #8ec0f0;
-    border-left: 1px solid #6da3e2;
-    border-right: 1px solid #1a3d7c;
-    border-bottom: 1px solid #1a3d7c;
-}
-
-.btn-close {
-    background: linear-gradient(to bottom, #e86060, #c02020);
-    border-top: 1px solid #f09090;
-    border-left: 1px solid #e86060;
-    border-right: 1px solid #901010;
-    border-bottom: 1px solid #901010;
-}
-
-/* toolbar - classic grey with raised button links */
+/* nav bar - win-buttons floats right, ul fills the rest */
 .top-nav {
     background-color: #d4d0c8;
     padding: 4px 6px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #808080;
+    overflow: hidden;
 }
 
 .top-nav ul {
@@ -115,7 +75,6 @@ body {
     background-color: #bab6ae;
 }
 
-/* sunken/pressed state for current page */
 .top-nav ul li a.current {
     background-color: #b8b4ac;
     border-top: 1px solid #808080;
@@ -124,7 +83,69 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-/* recessed content panel */
+/* window buttons sit on the right side of the nav bar */
+.win-buttons {
+    float: right;
+    padding: 1px 0 0 0;
+}
+
+.btn-minimize {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
+    border-top: 1px solid #8ec0f0;
+    border-left: 1px solid #6da3e2;
+    border-right: 1px solid #1a3d7c;
+    border-bottom: 1px solid #1a3d7c;
+}
+
+.btn-maximize {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
+    border-top: 1px solid #8ec0f0;
+    border-left: 1px solid #6da3e2;
+    border-right: 1px solid #1a3d7c;
+    border-bottom: 1px solid #1a3d7c;
+}
+
+.btn-close {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    background: linear-gradient(to bottom, #e86060, #c02020);
+    border-top: 1px solid #f09090;
+    border-left: 1px solid #e86060;
+    border-right: 1px solid #901010;
+    border-bottom: 1px solid #901010;
+}
+
 .main-content {
     background-color: #ffffff;
     margin: 8px;
@@ -154,7 +175,6 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* groupbox style intro */
 .intro-block {
     border: 1px solid #7f9db9;
     background-color: #f0f4ff;
@@ -167,7 +187,6 @@ body {
     color: #0a246a;
 }
 
-/* listview table */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -200,7 +219,6 @@ ul, ol {
     line-height: 1.6;
 }
 
-/* classic IE link colours */
 a {
     color: #0000ff;
 }
@@ -213,7 +231,6 @@ a:visited {
     color: #800080;
 }
 
-/* monospace for code blocks */
 pre {
     background-color: #ffffff;
     border: 1px solid #808080;
@@ -231,7 +248,6 @@ code {
     font-family: "Courier New", monospace;
 }
 
-/* status bar style footer */
 .page-footer {
     background-color: #d4d0c8;
     color: #000000;
