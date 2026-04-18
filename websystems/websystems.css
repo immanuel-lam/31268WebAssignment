@@ -12,7 +12,7 @@ body {
 /* main page wrapper, centres content and limits width */
 #page-wrap {
     width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     background-color: #ffffff;
 }
 
@@ -174,4 +174,9 @@ h3 {
     color: #1b3a5c;
     font-size: 1.05em;
     margin-top: 18px;
+}
+
+/* first h2 in content shouldn't have extra top margin */
+.main-content h2:first-child {
+    margin-top: 0;
 }
