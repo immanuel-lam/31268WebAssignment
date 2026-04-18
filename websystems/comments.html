@@ -23,7 +23,7 @@
         </ul>
         <div class="win-buttons">
             <span class="btn-minimize">&#8211;</span>
-            <span class="btn-maximize">&#9633;</span>
+            <span class="btn-maximize"><span class="max-icon"></span></span>
             <span class="btn-close">&#215;</span>
         </div>
     </nav>
@@ -257,15 +257,27 @@
                 <td>All pages</td>
             </tr>
             <tr>
-                <td><code>.btn-minimize</code> and <code>.btn-maximize</code></td>
-                <td>Class (separate)</td>
-                <td>XP-style minimize and maximize buttons: 21x21px inline-block, blue vertical gradient (#6da3e2 to #2e5fa8), raised border with lighter blue top-left and darker blue bottom-right. Defined separately in the CSS.</td>
+                <td><code>.btn-minimize</code></td>
+                <td>Class</td>
+                <td>Minimize button: 21x21px inline-block, blue gradient top to bottom, raised border (light top-left, dark bottom-right). Shows an en dash character.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.btn-maximize</code></td>
+                <td>Class</td>
+                <td>Maximize button: same size and blue gradient as minimize. Contains a nested span (.max-icon) instead of a character because the Unicode square looked too thin compared to the other buttons.</td>
+                <td>All pages</td>
+            </tr>
+            <tr>
+                <td><code>.max-icon</code></td>
+                <td>Class</td>
+                <td>The square icon drawn with CSS inside the maximize button: 9x9px inline-block with a 2px solid white border. Vertically centred with vertical-align: middle.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.btn-close</code></td>
                 <td>Class</td>
-                <td>XP-style close button: same size as the other buttons but with a red gradient (#e86060 to #c02020) and matching red raised border</td>
+                <td>Close button: same size as the other buttons but with a red gradient (#e86060 to #c02020) and matching red raised border. Shows a multiplication sign character.</td>
                 <td>All pages</td>
             </tr>
             <tr>
