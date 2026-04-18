@@ -226,6 +226,11 @@ tr:hover td {
     color: #ffffff;
 }
 
+tr:hover td code {
+    background-color: transparent;
+    color: #ffffff;
+}
+
 ul, ol {
     line-height: 1.6;
 }
