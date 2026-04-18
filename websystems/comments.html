@@ -23,7 +23,7 @@
         </ul>
         <div class="win-buttons">
             <span class="btn-minimize">&#8211;</span>
-            <span class="btn-maximize"><span class="max-icon"></span></span>
+            <span class="btn-maximize"></span>
             <span class="btn-close">&#215;</span>
         </div>
     </nav>
@@ -265,13 +265,13 @@
             <tr>
                 <td><code>.btn-maximize</code></td>
                 <td>Class</td>
-                <td>Maximize button: same size and blue gradient as minimize. Contains a nested span (.max-icon) instead of a character because the Unicode square looked too thin compared to the other buttons.</td>
+                <td>Maximize button: same size and blue gradient as minimize. The span is empty - the square icon is drawn by the .btn-maximize::before pseudo-element instead of a Unicode character, because the Unicode square rendered too thin.</td>
                 <td>All pages</td>
             </tr>
             <tr>
-                <td><code>.max-icon</code></td>
-                <td>Class</td>
-                <td>The square icon drawn with CSS inside the maximize button: 9x9px inline-block with a 2px solid white border. Vertically centred with vertical-align: middle.</td>
+                <td><code>.btn-maximize::before</code></td>
+                <td>Pseudo-element</td>
+                <td>Draws a 9x9px white outlined square inside the maximize button using content: "" with a 2px solid white border. Vertically centred with vertical-align: middle.</td>
                 <td>All pages</td>
             </tr>
             <tr>

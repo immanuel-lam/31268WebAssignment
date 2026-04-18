@@ -126,11 +126,11 @@ body {
     border-left: 1px solid #6da3e2;
     border-right: 1px solid #1a3d7c;
     border-bottom: 1px solid #1a3d7c;
-    vertical-align: top;
 }
 
-/* draws the square icon inside the maximize button */
-.max-icon {
+/* draws the square icon using a pseudo element */
+.btn-maximize::before {
+    content: "";
     display: inline-block;
     width: 9px;
     height: 9px;
