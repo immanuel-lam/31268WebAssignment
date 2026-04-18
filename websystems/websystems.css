@@ -230,6 +230,13 @@ tr:hover td {
     color: #ffffff;
 }
 
+/* code elements inside table cells were going invisible on hover (white text on white bg) */
+tr:hover td code {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: transparent;
+}
+
 a {
     color: #0000ff;
 }
