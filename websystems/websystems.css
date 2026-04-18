@@ -24,7 +24,8 @@ body {
 .site-header {
     background: linear-gradient(to right, #0a246a 0%, #3a6fb5 55%, #a6caf0 100%);
     color: #ffffff;
-    padding: 5px 8px;
+    padding: 5px 80px 5px 8px;
+    position: relative;
 }
 
 .site-header h1 {
@@ -38,6 +39,44 @@ body {
     font-size: 11px;
     color: #c8dff8;
     margin: 2px 0 0 0;
+}
+
+/* window control buttons */
+.win-buttons {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.btn-minimize, .btn-maximize, .btn-close {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0 #000033;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.btn-minimize, .btn-maximize {
+    background: linear-gradient(to bottom, #6da3e2, #2e5fa8);
+    border-top: 1px solid #8ec0f0;
+    border-left: 1px solid #6da3e2;
+    border-right: 1px solid #1a3d7c;
+    border-bottom: 1px solid #1a3d7c;
+}
+
+.btn-close {
+    background: linear-gradient(to bottom, #e86060, #c02020);
+    border-top: 1px solid #f09090;
+    border-left: 1px solid #e86060;
+    border-right: 1px solid #901010;
+    border-bottom: 1px solid #901010;
 }
 
 /* toolbar - classic grey with raised button links */
