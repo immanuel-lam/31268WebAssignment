@@ -14,11 +14,13 @@ body {
     margin: 0 auto;
     background-color: #ece9d8;
     border: 3px solid;
+    /* border-color with 4 values goes top right bottom left, used this to get the raised 3d look */
     border-color: #f5f4ef #404040 #404040 #f5f4ef;
     outline: 1px solid #808080;
 }
 
 .site-header {
+    /* linear-gradient from w3schools, changed the colours to match XP title bar */
     background: linear-gradient(to right, #0a246a, #3a6fb5, #a6caf0);
     color: #ffffff;
     padding: 5px 8px;
@@ -43,6 +45,7 @@ body {
     padding: 4px 6px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #808080;
+    /* needed position relative so the window buttons could use position absolute */
     position: relative;
     min-height: 30px;
 }
@@ -85,6 +88,7 @@ body {
 
 /* window buttons - pinned to right side of toolbar */
 .win-buttons {
+    /* position absolute so they sit at the far right regardless of nav links */
     position: absolute;
     right: 6px;
     top: 4px;
@@ -128,7 +132,7 @@ body {
     border-bottom: 1px solid #1a3d7c;
 }
 
-/* draws the square icon using a pseudo element */
+/* the unicode square character looked too thin so I used ::before to draw it instead, found this on w3schools */
 .btn-maximize::before {
     content: "";
     display: inline-block;
@@ -226,6 +230,7 @@ tr:hover td {
     color: #ffffff;
 }
 
+/* code elements inside table cells were going invisible on hover (white text on white bg) */
 tr:hover td code {
     background-color: transparent;
     color: #ffffff;
