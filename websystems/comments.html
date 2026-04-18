@@ -44,8 +44,8 @@
         <p>All four pages link to each other through the nav bar at the top. You can get
         anywhere from anywhere without hitting back.</p>
 
-        <p>All styles are in a single external file, <strong>websystems.css</strong>, linked
-        from every page with:</p>
+        <p>All styles are in one external file, <strong>websystems.css</strong>, linked from
+        every page with:</p>
 
         <pre>&lt;link rel="stylesheet" type="text/css" href="websystems.css"&gt;</pre>
 
@@ -60,22 +60,22 @@
         <p>Every page uses the same structure:</p>
 
 <pre>
-&lt;div id="page-wrap"&gt;             -- outer container, 860px, centred
-    &lt;header class="site-header"&gt; -- title and subtitle
-    &lt;nav class="top-nav"&gt;        -- navigation
-    &lt;div class="main-content"&gt;   -- page content
-    &lt;footer class="page-footer"&gt; -- footer
+&lt;div id="page-wrap"&gt;             -- outer window frame, 860px, centred
+    &lt;header class="site-header"&gt; -- title bar
+    &lt;nav class="top-nav"&gt;        -- toolbar with navigation buttons
+    &lt;div class="main-content"&gt;   -- recessed content panel
+    &lt;footer class="page-footer"&gt; -- status bar
 &lt;/div&gt;
 </pre>
 
-        <p>I used semantic HTML5 elements (header, nav, footer) because they actually describe
-        what the content is. The main content area uses a div since it's a generic container
-        and that's what div is for.</p>
+        <p>I used HTML5 semantic elements (header, nav, footer) where the element name
+        describes the content. The main content area uses a div because it is a generic
+        container and that is what div is for.</p>
 
         <p><strong>index.html</strong> has the intro-block div, a photo, and two lists.
         <strong>past.html</strong> has a timeline table and two lists. <strong>future.html</strong>
         has a certifications table and skill lists. <strong>comments.html</strong> (this page)
-        is the longest, mostly the big selector table and the design sections.</p>
+        is the longest page, with the big selector table and all the design sections.</p>
 
         <!-- section c -->
         <h2>c) Styles Used</h2>
@@ -92,169 +92,175 @@
             <tr>
                 <td><code>body</code></td>
                 <td>Element</td>
-                <td>Sets base font to Arial, light grey background (#ebebeb), near-black text (#1a1a1a), no margin, 10px top and bottom padding</td>
+                <td>Teal desktop background (#008080), Tahoma font, 12px base size, no margin, 20px top and bottom padding so the window sits off the edges</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>#page-wrap</code></td>
                 <td>ID</td>
-                <td>Sets width to 860px, centred with auto margins, white background, thin grey border all around</td>
+                <td>860px wide, centred with auto margins, grey window background (#ece9d8). Raised border using border-color shorthand (light top-left, dark bottom-right) and outline for the outer window frame effect.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header</code></td>
                 <td>Class</td>
-                <td>Dark teal background (#1f5252), white text, 20px top/bottom and 24px side padding</td>
+                <td>XP title bar using a linear-gradient from dark blue (#0a246a) on the left to light blue (#a6caf0) on the right. White text, 5px 8px padding.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header h1</code></td>
                 <td>Descendant</td>
-                <td>22px font size, removes default margin, 4px bottom margin to separate from the subtitle</td>
+                <td>13px bold, removes margin, text-shadow to make it look like XP window title text</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.site-header p</code></td>
                 <td>Descendant</td>
-                <td>Subtitle text is 13px and light teal (#99cccc) so it reads as secondary to the h1</td>
+                <td>Subtitle: 11px, light blue (#c8dff8) so it's visible on the gradient but less prominent than the title</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav</code></td>
                 <td>Class</td>
-                <td>Darker teal background (#163d3d) for the nav bar, no padding so links go edge to edge</td>
+                <td>Classic XP toolbar grey (#d4d0c8), raised top border, sunken bottom border, small padding</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul</code></td>
                 <td>Descendant</td>
-                <td>Removes bullet points and default padding from the list inside the nav</td>
+                <td>Removes bullet points and default padding from the nav list</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li</code></td>
                 <td>Descendant</td>
-                <td>Displays list items inline so nav links sit side by side instead of stacking</td>
+                <td>Inline so nav links sit side by side like toolbar buttons</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a</code></td>
                 <td>Descendant</td>
-                <td>Light teal text (#cceeee), no underline, inline-block with 9px 16px padding, 14px font</td>
+                <td>Styled as raised XP buttons: grey background (#d4d0c8), black text, raised border (white top-left, grey bottom-right). Inline-block with small padding.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a:hover</code></td>
                 <td>Pseudo-class</td>
-                <td>Medium teal background (#2e7a7a) with white text on hover</td>
+                <td>Slightly darker grey on hover to show the button responding</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.top-nav ul li a.current</code></td>
                 <td>Compound (class + descendant)</td>
-                <td>Same teal fill as hover applied permanently to the current page link</td>
+                <td>Reversed border (grey top-left, white bottom-right) and darker grey background - the sunken/pressed button state for the active page</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content</code></td>
                 <td>Class</td>
-                <td>20px top/bottom, 26px sides. Applied to the div wrapping all the main page content.</td>
+                <td>White recessed panel: white background, margin inside the grey window, 12px 16px padding. Sunken border (dark top-left, light bottom-right) gives the inset panel look.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content h2</code></td>
                 <td>Descendant</td>
-                <td>Section headings in dark teal (#1f5252), 1.2em. Just a colour change, no extra border or decoration.</td>
+                <td>13px bold, dark XP blue (#0a246a), light grey border-bottom as a divider</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>.main-content img</code></td>
                 <td>Descendant</td>
-                <td>Max-width 340px, block display, thin grey border, 10px top and bottom margin</td>
+                <td>Max-width 300px, block display, sunken border matching the content panel style</td>
                 <td>index.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>.intro-block</code></td>
                 <td>Class</td>
-                <td>Very light teal background (#eef6f6), 12px padding. Makes the intro paragraph on the home page stand out from the regular content.</td>
+                <td>Styled like a Windows groupbox: thin blue-grey border (#7f9db9), very light blue background (#f0f4ff). Used on the intro paragraph on the home page.</td>
                 <td>index.html</td>
             </tr>
             <tr>
                 <td><code>.emph</code></td>
                 <td>Class</td>
-                <td>Bold text in dark teal. Applied via span elements to highlight specific words.</td>
+                <td>Bold and dark blue (#0a246a). Applied via span elements.</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>table</code></td>
                 <td>Element</td>
-                <td>Full width, collapsed borders, 14px font size, 12px margin above and below</td>
+                <td>Full width, collapsed borders, 12px font, 8px margin</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>th</code></td>
                 <td>Element</td>
-                <td>Dark teal background matching the header, white text, 8px 10px padding, left-aligned</td>
+                <td>Classic XP ListView column header: toolbar grey background (#d4d0c8), black text, grey right and bottom borders, bold, left-aligned</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>td</code></td>
                 <td>Element</td>
-                <td>7px 10px padding, 1px grey border</td>
+                <td>3px 8px padding, very light grey borders matching the window background colour</td>
+                <td>past.html, future.html, comments.html</td>
+            </tr>
+            <tr>
+                <td><code>tr:hover td</code></td>
+                <td>Pseudo-class + descendant</td>
+                <td>XP selection highlight: blue background (#316ac5) with white text when hovering over a table row</td>
                 <td>past.html, future.html, comments.html</td>
             </tr>
             <tr>
                 <td><code>ul, ol</code></td>
                 <td>Grouped element</td>
-                <td>Line-height 1.75 on all lists</td>
+                <td>Line-height 1.6 on all lists</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a</code></td>
                 <td>Element</td>
-                <td>Sets link colour to dark teal (#1f5252), matching the heading and header colour</td>
+                <td>Classic IE link blue (#0000ff)</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a:hover</code></td>
                 <td>Pseudo-class</td>
-                <td>Darkens to #163d3d on hover</td>
+                <td>Slightly darker blue (#0000cc) on hover</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>a:visited</code></td>
                 <td>Pseudo-class</td>
-                <td>Purple (#7744aa) for visited links</td>
+                <td>Classic visited link purple (#800080), matching old IE default</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>pre</code></td>
                 <td>Element</td>
-                <td>Light grey background (#f5f5f5), border, 10px padding, white-space: pre-wrap so lines wrap. Used for the HTML structure diagram and link examples on this page.</td>
+                <td>White background, grey border, Courier New font, 11px, pre-wrap. Used for the structure diagram and code examples on this page.</td>
                 <td>comments.html</td>
             </tr>
             <tr>
                 <td><code>code</code></td>
                 <td>Element</td>
-                <td>Same grey background as pre with the same border, small padding. Used inline in the selector table.</td>
+                <td>Inline: white background, light grey border, Courier New 11px. Used in the selector table.</td>
                 <td>comments.html</td>
             </tr>
             <tr>
                 <td><code>.page-footer</code></td>
                 <td>Class</td>
-                <td>Darker teal (#163d3d) matching the nav bar, muted teal text (#88bbbb), centred, 13px, 10px padding</td>
+                <td>Styled like a Windows status bar: same grey as the toolbar (#d4d0c8), black text, 3px 8px padding, white top border, left-aligned text, 11px font</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>p</code></td>
                 <td>Element</td>
-                <td>Line-height 1.6 on all paragraphs</td>
+                <td>Line-height 1.5</td>
                 <td>All pages</td>
             </tr>
             <tr>
                 <td><code>h3</code></td>
                 <td>Element</td>
-                <td>Same teal colour as h2, 1em so slightly smaller, 15px top margin</td>
+                <td>12px bold, same dark blue as h2, 12px top margin</td>
                 <td>comments.html</td>
             </tr>
         </table>
@@ -262,57 +268,62 @@
         <!-- section d -->
         <h2>d) Graphic Design</h2>
 
+        <h3>Visual Theme</h3>
+
+        <p>I designed the site to look like a Windows XP application window. The layout maps
+        directly onto XP window components: the title bar, toolbar, recessed content area,
+        and status bar at the bottom. Everything is done with pure CSS and HTML - no images
+        for the chrome, no JavaScript.</p>
+
         <h3>Colours</h3>
 
-        <p>I went with dark teal as the main colour. Blue is really common for this kind of site
-        and I wanted something a bit different. The colours used:</p>
+        <p>All colours come from the Windows XP Luna theme palette:</p>
 
         <ul>
-            <li><strong>#1f5252</strong> - dark teal, header background, h2 headings, table headers, link colour</li>
-            <li><strong>#163d3d</strong> - darker teal, nav bar and footer background</li>
-            <li><strong>#2e7a7a</strong> - mid teal, nav hover and current page highlight</li>
-            <li><strong>#99cccc</strong> - light teal, header subtitle text</li>
-            <li><strong>#ebebeb</strong> - light grey, body background</li>
-            <li><strong>#ffffff</strong> - white, page content background</li>
-            <li><strong>#1a1a1a</strong> - near-black, body text</li>
+            <li><strong>#008080</strong> - the classic Windows teal desktop background</li>
+            <li><strong>#0a246a</strong> - title bar dark blue (left side of gradient)</li>
+            <li><strong>#a6caf0</strong> - title bar light blue (right side of gradient)</li>
+            <li><strong>#ece9d8</strong> - XP window background grey</li>
+            <li><strong>#d4d0c8</strong> - toolbar and button grey</li>
+            <li><strong>#316ac5</strong> - XP selection highlight blue</li>
+            <li><strong>#0000ff</strong> - classic IE link blue</li>
+            <li><strong>#800080</strong> - classic IE visited link purple</li>
         </ul>
 
-        <p>The same dark teal is used across the header, h2 headings, table headers and links
-        so everything looks like it belongs together. The nav bar and footer use a slightly
-        darker version of it. I checked the colour combinations against the bad pairings list
-        in the spec - none of those are used.</p>
+        <p>The raised and sunken border effects use border-color shorthand with #ffffff on
+        the highlight sides and #808080 or #404040 on the shadow sides. This is how Windows
+        drew its 3D controls before flat design.</p>
+
+        <p>No bad colour combinations from the spec are used. The teal desktop is dark but
+        the content sits inside a white panel so readability is fine.</p>
 
         <h3>Fonts</h3>
 
-        <p>Arial throughout. No external fonts needed and it works on every system. Size hierarchy:</p>
-
-        <ul>
-            <li><strong>h1 in header:</strong> 22px</li>
-            <li><strong>nav links:</strong> 14px</li>
-            <li><strong>h2 section headings:</strong> 1.2em</li>
-            <li><strong>h3 sub-headings:</strong> 1em</li>
-            <li><strong>body text:</strong> inherited (browser default 16px)</li>
-            <li><strong>footer and tables:</strong> 13px</li>
-        </ul>
+        <p>Tahoma is the system font Windows XP used for almost everything. Arial is the
+        fallback if Tahoma isn't available. Base size is 12px which matches the default
+        XP system font size. Courier New is used for code and pre blocks as it was the
+        standard monospace font in that era.</p>
 
         <h3>Layout</h3>
 
-        <p>860px fixed width, centred on the page. White content box on a light grey body so
-        the page has some depth. The header and the whole page are left-aligned so the h1
-        sits to the left, not centred - I think it looks a bit less generic that way.</p>
+        <p>860px fixed width, centred. The grey desktop background shows around the window.
+        The raised outer border and darker outline create the three-dimensional window frame
+        effect. Inside, the content area is a white recessed panel with the border direction
+        reversed, so it looks inset into the grey window.</p>
 
-        <p>Structure is the same on every page: header, nav, content, footer. Paragraph text
-        is all left-aligned.</p>
+        <p>The nav buttons have raised borders that flip to sunken when the current page is
+        active, the same way XP toolbar buttons worked.</p>
 
         <h3>What worked</h3>
-        <p>Using one colour consistently across headers, headings, links and table headers makes
-        the page look consistent without having to do anything complicated. The teal feels a bit
-        more personal than just using blue.</p>
+        <p>The raised/sunken border trick with just border-color gives a convincing 3D
+        effect without needing any images. The title bar gradient looks close to the real
+        XP title bar. The table row hover highlight in XP selection blue is a small touch
+        that fits the theme.</p>
 
         <h3>What could be better</h3>
-        <p>The site is simple. The content pages are mostly just text and lists. I prioritised
-        getting the structure right over making it visually interesting, which I think was the
-        right call for this assignment.</p>
+        <p>A real XP window would have min/max/close buttons in the title bar and a window
+        icon on the left. These could be added with more CSS work. The fonts on the page
+        depend on Tahoma being installed which isn't guaranteed on every system.</p>
 
         <!-- section e -->
         <h2>e) Accessibility</h2>
@@ -326,31 +337,31 @@
         <p>Photo is mine so no credit needed. The alt text describes what the image shows.
         Screen readers read this aloud and it also shows if the image fails to load.</p>
 
-        <p>The site map image on this page also has alt text describing what it shows.</p>
+        <p>The site map image on this page also has alt text.</p>
 
         <h3>CSS Off Test</h3>
 
         <p>Tested in Firefox with CSS disabled (View, Page Style, No Style). With CSS off:</p>
 
         <ul>
-            <li>All text content is still readable</li>
-            <li>Nav links at the top still work so you can still move between pages</li>
+            <li>All text content is readable</li>
+            <li>Nav links still work - can navigate between all four pages</li>
             <li>Tables still display as normal HTML tables</li>
             <li>Lists and headings keep their structure</li>
             <li>Reading order (header, nav, content, footer) still makes sense</li>
         </ul>
 
-        <p>Using HTML5 semantic elements (header, nav, footer) means the structure is
-        meaningful without CSS, not just visual.</p>
+        <p>The XP styling is entirely visual - the HTML structure is valid semantic HTML5
+        so it still works without the CSS.</p>
 
         <h3>Other</h3>
 
         <ul>
-            <li>Links have descriptive text, not just "click here"</li>
+            <li>Links use descriptive text, not just "click here"</li>
             <li>No JavaScript - works with JS disabled</li>
-            <li>Good contrast throughout: dark text on white, light text on dark backgrounds</li>
-            <li>No horizontal scrolling at normal viewport sizes</li>
-            <li>No animations</li>
+            <li>Content is all inside the white recessed panel so readability is good</li>
+            <li>No horizontal scrolling at normal sizes</li>
+            <li>No animations or flashing</li>
         </ul>
 
     </div>

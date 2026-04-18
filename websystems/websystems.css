@@ -2,42 +2,50 @@
 /* Web Systems Assignment - Immanuel */
 
 body {
-    background-color: #ebebeb;
-    font-family: Arial, sans-serif;
-    color: #1a1a1a;
+    background-color: #008080;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #000000;
     margin: 0;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
+/* window frame */
 #page-wrap {
     width: 860px;
     margin: 0 auto;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+    background-color: #ece9d8;
+    border: 3px solid;
+    border-color: #f5f4ef #404040 #404040 #f5f4ef;
+    outline: 1px solid #808080;
 }
 
-/* header */
+/* title bar */
 .site-header {
-    background-color: #1f5252;
+    background: linear-gradient(to right, #0a246a 0%, #3a6fb5 55%, #a6caf0 100%);
     color: #ffffff;
-    padding: 20px 24px;
+    padding: 5px 8px;
 }
 
 .site-header h1 {
-    margin: 0 0 4px 0;
-    font-size: 22px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000044;
 }
 
 .site-header p {
-    margin: 0;
-    font-size: 13px;
-    color: #99cccc;
+    font-size: 11px;
+    color: #c8dff8;
+    margin: 2px 0 0 0;
 }
 
-/* nav */
+/* toolbar - classic grey with raised button links */
 .top-nav {
-    background-color: #163d3d;
-    padding: 0;
+    background-color: #d4d0c8;
+    padding: 4px 6px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #808080;
 }
 
 .top-nav ul {
@@ -52,118 +60,155 @@ body {
 
 .top-nav ul li a {
     display: inline-block;
-    color: #cceeee;
+    background-color: #d4d0c8;
+    color: #000000;
     text-decoration: none;
-    padding: 9px 16px;
-    font-size: 14px;
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-right: 2px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
 }
 
 .top-nav ul li a:hover {
-    background-color: #2e7a7a;
-    color: #ffffff;
+    background-color: #bab6ae;
 }
 
+/* sunken/pressed state for current page */
 .top-nav ul li a.current {
-    background-color: #2e7a7a;
-    color: #ffffff;
+    background-color: #b8b4ac;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
-/* content */
+/* recessed content panel */
 .main-content {
-    padding: 20px 26px;
+    background-color: #ffffff;
+    margin: 8px;
+    padding: 12px 16px;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 .main-content h2 {
-    color: #1f5252;
-    font-size: 1.2em;
-    margin-top: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0a246a;
+    margin-top: 16px;
+    border-bottom: 1px solid #d4d0c8;
+    padding-bottom: 2px;
 }
 
 .main-content img {
-    max-width: 340px;
-    border: 1px solid #cccccc;
+    max-width: 300px;
     display: block;
-    margin: 10px 0;
+    margin: 8px 0;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
-/* intro box on home page */
+/* groupbox style intro */
 .intro-block {
-    background-color: #eef6f6;
-    padding: 12px 15px;
-    margin: 12px 0;
+    border: 1px solid #7f9db9;
+    background-color: #f0f4ff;
+    padding: 8px 12px;
+    margin: 8px 0;
 }
 
-/* span to highlight words */
 .emph {
     font-weight: bold;
-    color: #1f5252;
+    color: #0a246a;
 }
 
+/* listview table */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 12px 0;
-    font-size: 14px;
+    margin: 8px 0;
+    font-size: 12px;
 }
 
 th {
-    background-color: #1f5252;
-    color: #ffffff;
-    padding: 8px 10px;
+    background-color: #d4d0c8;
+    color: #000000;
+    padding: 4px 8px;
     text-align: left;
+    font-weight: bold;
+    border-right: 1px solid #808080;
+    border-bottom: 2px solid #808080;
 }
 
 td {
-    padding: 7px 10px;
-    border: 1px solid #bbbbbb;
+    padding: 3px 8px;
+    border-bottom: 1px solid #ece9d8;
+    border-right: 1px solid #ece9d8;
+}
+
+tr:hover td {
+    background-color: #316ac5;
+    color: #ffffff;
 }
 
 ul, ol {
-    line-height: 1.75;
-}
-
-a {
-    color: #1f5252;
-}
-
-a:hover {
-    color: #163d3d;
-}
-
-a:visited {
-    color: #7744aa;
-}
-
-/* code blocks on comments page */
-pre {
-    background-color: #f5f5f5;
-    border: 1px solid #dddddd;
-    padding: 10px;
-    white-space: pre-wrap;
-    font-size: 13px;
-}
-
-code {
-    background-color: #f5f5f5;
-    border: 1px solid #dddddd;
-    padding: 1px 4px;
-    font-size: 13px;
-}
-
-.page-footer {
-    background-color: #163d3d;
-    color: #88bbbb;
-    text-align: center;
-    padding: 10px;
-    font-size: 13px;
-}
-
-p {
     line-height: 1.6;
 }
 
+/* classic IE link colours */
+a {
+    color: #0000ff;
+}
+
+a:hover {
+    color: #0000cc;
+}
+
+a:visited {
+    color: #800080;
+}
+
+/* monospace for code blocks */
+pre {
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    padding: 8px;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    white-space: pre-wrap;
+}
+
+code {
+    background-color: #ffffff;
+    border: 1px solid #d4d0c8;
+    padding: 0 3px;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+}
+
+/* status bar style footer */
+.page-footer {
+    background-color: #d4d0c8;
+    color: #000000;
+    padding: 3px 8px;
+    font-size: 11px;
+    text-align: left;
+    border-top: 1px solid #ffffff;
+}
+
+p {
+    line-height: 1.5;
+}
+
 h3 {
-    color: #1f5252;
-    font-size: 1em;
-    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0a246a;
+    margin-top: 12px;
 }
