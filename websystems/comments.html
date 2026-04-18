@@ -15,17 +15,17 @@
     </header>
 
     <nav class="top-nav">
-        <div class="win-buttons">
-            <span class="btn-minimize">&#8211;</span>
-            <span class="btn-maximize">&#9633;</span>
-            <span class="btn-close">&#215;</span>
-        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="past.html">Past</a></li>
             <li><a href="future.html">Future</a></li>
             <li><a href="comments.html" class="current">Comments</a></li>
         </ul>
+        <div class="win-buttons">
+            <span class="btn-minimize">&#8211;</span>
+            <span class="btn-maximize">&#9633;</span>
+            <span class="btn-close">&#215;</span>
+        </div>
     </nav>
 
     <div class="main-content">
@@ -253,7 +253,7 @@
             <tr>
                 <td><code>.win-buttons</code></td>
                 <td>Class</td>
-                <td>Container for the window control buttons. Float: right inside the nav bar so the buttons sit on the far right of the same row as the nav links. Overflow: hidden on .top-nav contains the float.</td>
+                <td>Container div for the three window control buttons. Position: absolute with right: 6px, top: 4px inside the nav bar (which has position: relative) so they always sit pinned to the far right of the toolbar.</td>
                 <td>All pages</td>
             </tr>
             <tr>
