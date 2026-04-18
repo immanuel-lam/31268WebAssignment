@@ -229,6 +229,7 @@ tr:hover td {
 tr:hover td code {
     background-color: transparent;
     color: #ffffff;
+    border-color: transparent;
 }
 
 ul, ol {
